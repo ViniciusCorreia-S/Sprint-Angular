@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap');
+
+
+body {
+    font-family: "Special Gothic Condensed One", sans-serif;
+    margin: 0;
+    padding: 0;
+}
