@@ -1,26 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Spice&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap');
 
-body {
+main {
   height: 100vh;
-  width: 100vw;
+  display: flex;
+  flex-direction: row;
 }
 
-.car {
+main section {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  float: left;
-  height: 100vh;
-  width: 50%;
-  margin-left: 40px;
-  
-  img {
-    width:100%;
-  }
+  justify-content: center;
+  align-items: center;
 }
-.descricao {
-  height: 10%;
+
+.car img {
   width: 100%;
+}
+
+.form {
+  background-color: #f0f0f0;
+}
+
+.form img {
+  width: 40%;
+}
+/*
+.descricao {
   border-bottom: solid 1px black;
   strong {
     font-size: 2rem;
@@ -32,7 +37,7 @@ body {
   }
 }
 
-.Login {
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,18 +54,11 @@ body {
     width: 40%;
   }
 }
-form .info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 90%;
-}
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
   width: 90%;
   font-size: 1.2rem;
 }
@@ -74,19 +72,23 @@ input {
   padding: 8px;
   width: 25rem;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
   background-color: #f0f0f0;
 }
 .reset {
-  width: 20rem;
+  width: 15rem;
+  cursor: pointer;
+}
+.reset:hover {
+  background-color: #666666;
 }
 
 button {
   margin: 10px;
   margin-top: 30px;
   padding: 8px;
-  width: 20rem;
+  width: 25rem;
   font-size: 1rem;
   border-radius: 10px;
   border: none;
@@ -94,13 +96,13 @@ button {
   color: white;
   border: solid 1px black;
   box-shadow: 0px 5px 0px 0px black;
-  transition: 0.8s;
+  transition: 0.5s;
   cursor: pointer;
 }
 button:hover {
   background-color: #3c3c3c;
   box-shadow: 0px 0px 0px 0px black;
-}
+} */
 
 
 /* :host {
