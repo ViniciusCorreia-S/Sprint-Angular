@@ -1,42 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Spice&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap');
 
 main {
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
   flex-direction: row;
+  font-family: "Special Gothic Condensed One", sans-serif;
+  font-weight: 500;
 }
 
 main section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
 }
 
-.car img {
-  width: 100%;
-}
-
-.form {
+.login {
   background-color: #f0f0f0;
 }
 
 .form img {
   width: 40%;
 }
-/*
-.descricao {
-  border-bottom: solid 1px black;
-  strong {
-    font-size: 2rem;
-    font-family: "Bungee Outline", sans-serif;
-    font-weight: 900;
-  }
-  p {
-    font-size: 1.2rem;
-  }
+
+h1 {
+  font-size: 2.5rem;
+  background-image: linear-gradient(rgb(0, 183, 255), rgb(0, 52, 121));  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 60px;
 }
 
+/*
 .login {
   display: flex;
   flex-direction: column;
@@ -54,57 +51,6 @@ main section {
     width: 40%;
   }
 }
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  font-size: 1.2rem;
-}
-h1 {
-  font-size: 2.5rem;
-  color: green;
-  margin-bottom: 80px;
-}
-input {
-  margin: 10px;
-  padding: 8px;
-  width: 25rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #f0f0f0;
-}
-.reset {
-  width: 15rem;
-  cursor: pointer;
-}
-.reset:hover {
-  background-color: #666666;
-}
-
-button {
-  margin: 10px;
-  margin-top: 30px;
-  padding: 8px;
-  width: 25rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: none;
-  background-color: #3c3cff;
-  color: white;
-  border: solid 1px black;
-  box-shadow: 0px 5px 0px 0px black;
-  transition: 0.5s;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #3c3c3c;
-  box-shadow: 0px 0px 0px 0px black;
-} */
-
-
 /* :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --electric-violet: oklch(53.18% 0.28 296.97);

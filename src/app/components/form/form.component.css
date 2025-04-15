@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    margin: 10px;
+    padding: 10px;
+    width: 30rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+}
+.reset {
+    width: 12rem;
+    cursor: pointer;
+}
+.reset:hover {
+    background-color: #666666;
+}
+  
+button {
+    margin: 10px;
+    margin-top: 30px;
+    padding: 8px;
+    width: 30rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #3c3cff;
+    color: white;
+    border: solid 1px black;
+    box-shadow: 0px 5px 0px 0px black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3c3c3c;
+    box-shadow: 0px 0px 0px 0px black;
+}
