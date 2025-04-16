@@ -1,7 +1,24 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<form action="" method="">
-    <input type="text" placeholder="Insira seu e-mail" required>
-    <input type="password" placeholder="Insira sua senha" required>
+<form>
+    <div class="input">
+        <div class="input-text">
+            <i class="fa-solid fa-user" id="iconInput"></i>
+            <input type="text" name="nome" placeholder="Insira seu nome" required>
+        </div>
+        <i class="fa-regular fa-circle-check" id="icon-checked"></i>
+        <i class="fa-regular fa-circle-xmark" id="icon-unchecked"></i>
+
+    </div>
+    
+    <div class="input">
+        <div class="input-text">
+            <i class="fa-solid fa-lock" id="iconInput"></i>
+            <input type="password" placeholder="Insira sua senha" minlength="6" required>
+        </div>
+        <i class="fa-regular fa-circle-check" id="icon-checked"></i>
+        <i class="fa-regular fa-circle-xmark" id="icon-unchecked"></i>
+    </div>
     
     <button type="submit" (click)="Enter()">Entrar</button>
     <input type="reset" value="Limpar" class="reset">
