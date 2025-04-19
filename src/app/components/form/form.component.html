@@ -1,25 +1,51 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="Submit()" #formDir="ngForm" method="get">
     <div class="input">
         <div class="input-text">
-            <i class="fa-solid fa-user" id="iconInput"></i>
-            <input type="text" name="nome" placeholder="Insira seu nome" required>
+            <div class="input-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <input 
+                type="text"
+                placeholder="Insira seu nome"
+                formControlName="nome"
+                name="nome"
+                required
+            />
         </div>
-        <i class="fa-regular fa-circle-check" id="icon-checked"></i>
-        <i class="fa-regular fa-circle-xmark" id="icon-unchecked"></i>
+    </div>
+    <div *ngIf="validationError" class="validation-error">
+        <p><i class="fa-solid fa-triangle-exclamation"></i>Campo obrigatório</p>
+    </div>
 
-    </div>
-    
     <div class="input">
         <div class="input-text">
-            <i class="fa-solid fa-lock" id="iconInput"></i>
-            <input type="password" placeholder="Insira sua senha" minlength="6" required>
+            <div class="input-icon">
+                <i class="fa-solid fa-lock" id="iconInput"></i>
+            </div>
+            <input 
+                [type]="passwordVisible ? 'text' : 'password'" 
+                [(ngModel)]="password" 
+                placeholder="Insira sua senha" 
+                formControlName="senha"
+                [(ngModel)]="inputValue" 
+                (ngModelChange)="updateInputLength($event)"
+                name="senha"
+                required
+            />
+            <button type="button" (click)="togglePasswordVisibility()" class="toggle-password">
+                <fa-icon [icon]="passwordVisible ? 'eye-slash' : 'eye'"></fa-icon>
+              </button>
         </div>
-        <i class="fa-regular fa-circle-check" id="icon-checked"></i>
-        <i class="fa-regular fa-circle-xmark" id="icon-unchecked"></i>
+    </div>
+    <!-- <div *ngIf="senha.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="senha.errors?.['required']">Campo obrigatório</p>
+    </div> -->
+    <div *ngIf="validationError" class="validation-error">
+        <p><i class="fa-solid fa-triangle-exclamation"></i>Campo obrigatório</p>
     </div>
     
-    <button type="submit" (click)="Enter()">Entrar</button>
-    <input type="reset" value="Limpar" class="reset">
+    <button type="submit" id="button" (click)="Submit()" [disabled]="loginForm.invalid">Entrar</button>
+    <input type="reset" value="Limpar" class="reset" (click)="resetForm()"/>
 </form>

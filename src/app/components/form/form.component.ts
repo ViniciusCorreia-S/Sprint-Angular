@@ -1,45 +1,65 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component }from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule , CommonModule , FontAwesomeModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
 
 export class FormComponent {
-  Enter() {
-    console.log("Enter");
+
+  inputValue: any = undefined!;
+  buttonSubmit: HTMLButtonElement = document.querySelector('#button') as HTMLButtonElement;
+  
+  updateInputLength(event: any) {
+    this.inputValue = event.target.value.length;
+  }
+  
+  password: string = '';
+  passwordVisible: boolean = false;
+  
+  togglePasswordVisibility() {
+    this.passwordVisible = !this.passwordVisible;
   }
 
-  loginForm = new FormGroup({
-    nome: new FormControl('', [Validators.required]),
-    senha: new FormControl('', [Validators.required, Validators.minLength(6)]),
-  });
+  loginForm!: FormGroup;
+  library: FaIconLibrary = new FaIconLibrary();
+  
+  constructor (library: FaIconLibrary) {
+    this.loginForm = new FormGroup({
+      nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      senha: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    });
+    library.addIcons(faEye, faEyeSlash);
+  }
+
+  get nome() {
+    return this.loginForm.get('nome')!;
+  }
+
+  get senha() {
+    return this.loginForm.get('senha')!;
+  }
+
+
+
+  validationError: boolean = false;
+
+  resetForm () {
+    this.validationError = true;
+
+    setInterval(() => {
+      this.validationError = false;
+    },3000);
+  }
+
+  Submit () {
+    console.table(this.loginForm.value);
+    console.log('Form submitted successfully!');
+  }
 }
-
-
-
-
-// const inputText = document.getElementsByName('nome').values;
-// let nome :string = "admin";
-// const iconChecked :any = document.querySelector('#icon-checked');
-
-// if (inputText != nome) {
-//   alert("ERRO!");
-//  } else {
-//   alert("SUCESSO!");
-// }
-
-// if (inputText && iconChecked) {
-//   inputText.addEventListener('input', () => {
-    // const caracteres = inputText.length;
-
-    // if (caracteres >= 6) {
-    //   iconChecked.style.display = 'block';
-    // } else {
-    //   iconChecked.style.display = 'none';
-    // }
-//   });
-// }
