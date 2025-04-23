@@ -23,8 +23,8 @@ form {
 .input-text {
     display: flex;
     margin: 10px;
-    width: 25rem;
-    height: 2.5rem;
+    width: 27rem;
+    height: 2.7rem;
     border-radius: 10px;
     background-color: #ffffff;
     border: solid 1px black;
@@ -80,7 +80,7 @@ form {
 .form-check {
     #flexSwitchCheckDefault{
         width: 2.5rem;
-        height: 1.2rem;
+        height: 1.3rem;
         margin-right: 10px;
     }
 }

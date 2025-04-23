@@ -3,10 +3,11 @@ import { Component }from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule , CommonModule , FontAwesomeModule],
+  imports: [ReactiveFormsModule , CommonModule , FontAwesomeModule , RouterLink ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
@@ -31,7 +32,7 @@ export class FormComponent {
   loginForm!: FormGroup;
   library: FaIconLibrary = new FaIconLibrary();
   
-  constructor (library: FaIconLibrary) {
+  constructor (library: FaIconLibrary , private router: Router) {
     this.loginForm = new FormGroup({
       nome: new FormControl('', [Validators.required, Validators.minLength(3)]),
       senha: new FormControl('', [Validators.required, Validators.minLength(6)]),
@@ -62,6 +63,8 @@ export class FormComponent {
     this.loginForm.reset();
   }
 
+
+
   Submit () {
     console.log('Form submitted success!');
     
@@ -69,5 +72,9 @@ export class FormComponent {
     console.table(data);
 
     this.loginForm.reset();
+
+    this.router.navigate(['/home']);
+    
+
   }
 }
