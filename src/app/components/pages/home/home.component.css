@@ -1,3 +1,7 @@
+:root {
+    --blue-primary: #3c3cff;
+}
+
 main {
     background-image: url("../../../../../public/img/ranger.png");
     background-size: 80%;
@@ -6,3 +10,13 @@ main {
     height: 100vh;
 }
 
+.cardHome {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    max-width: 40%;
+    max-height: 60%;
+}

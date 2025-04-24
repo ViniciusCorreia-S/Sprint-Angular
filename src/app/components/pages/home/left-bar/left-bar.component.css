@@ -1,0 +1,65 @@
+.leftBar_Button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    position: fixed;
+    top: 10px;
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    i {
+        scale: 2; 
+    }
+}
+.leftBar_Button:hover {
+    box-shadow: 0 0 12px black;
+}
+
+.leftBar {
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    padding-top: 25px;
+    box-shadow: 0 0 12px black;
+}
+.logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    padding-right: 30px;
+    img{
+        width: 120px;
+        height: 50px;
+    }
+}
+.menu {
+    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0;
+    div {
+        font-size: 1rem;
+        height: 50%;
+        padding: 10px;
+        border: solid 1px #858585;
+        cursor: pointer;
+        a {
+            padding-left: 3px;
+            border-left: solid 2px #ff6600;
+        }
+    }
+    div:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.shadow select {
+    background-color: #9b9b9b;
+}
