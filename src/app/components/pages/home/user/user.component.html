@@ -1,0 +1,14 @@
+
+<div class="user" [ngClass]="userBtn ? 'userOpen' : 'userClosed'">
+    <h1>admin</h1>
+    <p>admin.ba.senai.br</p>
+    <div>
+        <button>Close</button>
+    </div>
+</div>
+
+<div class="userBtn">
+    <button><i class="fa-solid fa-user" (click)="openUser()"></i></button>
+</div>
+
+

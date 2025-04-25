@@ -3,11 +3,11 @@ import { Component }from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule , CommonModule , FontAwesomeModule , RouterLink ],
+  imports: [ReactiveFormsModule , CommonModule , FontAwesomeModule ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })

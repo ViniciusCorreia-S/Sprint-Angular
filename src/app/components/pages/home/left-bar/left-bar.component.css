@@ -2,17 +2,19 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: solid 1px #858585;
     margin: 20px;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
     position: fixed;
     top: 10px;
+    cursor: pointer;
     button {
         background-color: transparent;
         border: none;
-        cursor: pointer;
     }
     i {
         scale: 2; 
@@ -22,19 +24,37 @@
     box-shadow: 0 0 12px black;
 }
 
+.leftBarOpen{
+    width: 250px;
+}
+.leftBarClosed{
+    width: 0;
+}
+
+
 .leftBar {
-    width: 20%;
     height: 100%;
     background-color: white;
     padding-top: 25px;
-    box-shadow: 0 0 12px black;
+    box-shadow: 0 0 30px black;
+    z-index: 100;
+    position: fixed;
+    overflow: hidden;
+    transition: all .3s;
+}
+.closeBar button{
+    border: none;
+    background-color: white;
+    scale: 1.8;
+    float: right;
+    margin-right: 20px;
 }
 .logo {
     width: 100%;
     height: 100px;
     display: flex;
-    justify-content: right;
-    padding-right: 30px;
+    justify-content: center;
+    margin-top: 40px;
     img{
         width: 120px;
         height: 50px;
@@ -55,11 +75,24 @@
             border-left: solid 2px #ff6600;
         }
     }
-    div:hover {
-        background-color: #e0e0e0;
+    button {
+        background-color: #f0f0f0;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        height: 100%;
+        width: 100%;
+        text-align: left;
     }
 }
 
-.shadow select {
-    background-color: #9b9b9b;
+.shadow {
+    background-color: rgba(0, 0, 0, 1);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.6;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
 }

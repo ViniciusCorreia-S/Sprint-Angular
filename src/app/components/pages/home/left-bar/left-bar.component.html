@@ -3,25 +3,28 @@
 
 
 <div class="leftBar_Button">
-    <button (click)="sideBar()"><i class="fa-solid fa-bars"></i></button>
+    <button (click)="openBar()"><i class="fa-solid fa-bars"></i></button>
 </div>
 
-<div class="leftBar">
+<div class="leftBar" [ngClass]="barButton ? 'leftBarOpen' : 'leftBarClosed'">
+    <div class="closeBar">
+        <button (click)="closeBar()"><i class="fa-solid fa-right-from-bracket"></i></button>
+    </div>
     <div class="logo">
-        <img src="img/ford.png" alt="logo">
+        <img src="img/ford.png" alt="logo" draggable="false">
     </div>
     <div class="menu">
         <div class="home">
-            <a>Home</a>
+            <button (click)="home()">Home</button>
         </div>
         <div class="dashboard">
-            <a>Dashboard</a>
+            <button (click)="dashboard()">Dashboard</button>
         </div>
     </div>
 </div>
 
-<div class="shadow">
-    <select>
-        ee
-    </select>
+<div class="shadow" (click)="closeBar()" *ngIf="barButton">
+    <div class="shadowBar"></div>
+    
 </div>
+
