@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+import { CardComponent } from '../../components/card/card.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { LeftBarComponent } from '../../components/left-bar/left-bar.component';
+import { TableComponent } from '../../components/table/table.component';
+
+@Component({
+  selector: 'app-dashboard',
+  imports: [ CardComponent , HeaderComponent , LeftBarComponent , TableComponent ],
+  templateUrl: './dashboard.component.html',
+  styleUrl: './dashboard.component.css'
+})
+export class DashboardComponent {
+  vehicle!: string
+
+}

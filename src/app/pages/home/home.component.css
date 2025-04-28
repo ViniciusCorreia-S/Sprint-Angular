@@ -1,9 +1,6 @@
-:root {
-    --blue-primary: #3c3cff;
-}
 
 main {
-    background-image: url("../../../../../public/img/ranger.png");
+    background-image: url("/../../img/ranger.png");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;

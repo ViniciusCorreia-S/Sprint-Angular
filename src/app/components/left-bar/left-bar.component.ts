@@ -27,7 +27,7 @@ export class LeftBarComponent {
   }
 
   constructor(private router: Router) {
-   }
+  }
 
 
   home( ) {

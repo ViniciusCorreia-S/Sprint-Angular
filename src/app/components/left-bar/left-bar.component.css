@@ -3,6 +3,7 @@
     height: 50px;
     border-radius: 50%;
     border: solid 1px #858585;
+    background-color: #ededed;
     margin: 20px;
     padding: 30px;
     display: flex;
@@ -10,7 +11,8 @@
     align-items: center;
     transition: 0.3s;
     position: fixed;
-    top: 10px;
+    top: 0px;
+    left: 10px;
     cursor: pointer;
     button {
         background-color: transparent;
@@ -39,6 +41,8 @@
     box-shadow: 0 0 30px black;
     z-index: 100;
     position: fixed;
+    top: 0;
+    left: 0;
     overflow: hidden;
     transition: all .3s;
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CardComponent } from './card/card.component';
-import { LeftBarComponent } from './left-bar/left-bar.component';
-import { UserComponent } from './user/user.component';
+import { CardComponent } from '../../components/card/card.component';
+import { LeftBarComponent } from '../../components/left-bar/left-bar.component';
+import { UserComponent } from '../../components/user/user.component';
 
 @Component({
   selector: 'app-home',
