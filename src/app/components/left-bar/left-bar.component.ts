@@ -16,14 +16,12 @@ export class LeftBarComponent {
     this.barButton = true;
 
     const leftBar = document.querySelector('.left-bar') as HTMLElement;
-    // leftBar.style.width = '250px';
   }
 
   closeBar() {
     this.barButton = false;
 
     const leftBar = document.querySelector('.left-bar') as HTMLElement;
-    // leftBar.style.width = '0';
   }
 
   constructor(private router: Router) {

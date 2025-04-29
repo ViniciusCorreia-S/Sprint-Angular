@@ -1,6 +1,6 @@
 
 main {
-    background-image: url("/../../img/ranger.png");
+    background-image: url("/../../../ranger.png");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
