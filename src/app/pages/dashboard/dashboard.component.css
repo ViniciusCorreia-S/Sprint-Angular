@@ -17,7 +17,6 @@ main {
 
 .cardDashboard {
     position: fixed;
-    /* text-align: center; */
     display: flex;
     width: 14rem;
     height: 12rem;
